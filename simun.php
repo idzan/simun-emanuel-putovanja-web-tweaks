@@ -7,10 +7,8 @@ Author: Idzan Marko
 Version: 1.0
 */
 
-define('CODE_PATH', plugin_dir_path(__FILE__));
-
 function remove_href_attribute() {
-    $plugin_url = plugin_dir_url(_FILE_);
+    $plugin_url = plugin_dir_url(__FILE__);
     wp_register_script('code', $plugin_url . 'js/code.js');
     wp_enqueue_script('code');
 }
